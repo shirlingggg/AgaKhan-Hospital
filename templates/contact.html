@@ -4,6 +4,10 @@
 
 {% block content %}
 
+    {% for message in messages  %}
+        <p class="alert alert-success">    	{{ message }} </p>
+    {% endfor %}
+
 <!-- Contact Section -->
     <section id="contact" class="contact section">
 
@@ -50,6 +54,7 @@
 
           <div class="col-lg-8">
             <form method="post">
+                {% csrf_token %}
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -79,6 +84,9 @@
               </div>
             </form>
           </div><!-- End Contact Form -->
+        </div>
+      </div>
+    </section>
 
 
 

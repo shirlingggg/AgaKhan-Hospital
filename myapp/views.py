@@ -58,7 +58,7 @@ def contact(request):
         )
         mycontact.save()
         messages.success(request, 'Your message has been submitted successfully!')
-        return redirect('')
+        return redirect('/contact')
     else:
 
         return render(request, 'contact.html')
