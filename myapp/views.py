@@ -68,7 +68,7 @@ def show(request):
     return render(request, 'show.html', {'all': all})
 
 def showcontact(request):
-    allcontacts= Appointment.objects.all()
+    allcontacts= Contact.objects.all()
     return render(request, 'showcontact.html', {'allcontacts': allcontacts})
 
 def delete(request, id):

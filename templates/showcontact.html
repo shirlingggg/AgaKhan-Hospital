@@ -3,9 +3,33 @@
 {% load static %}
 
 {% block content %}
-    <h1>Contacts</h1>
+    <h1 class="text-center">Contacts</h1>
+
+     <table class="table table-success container ">
+     <tr>
+         <th>Name</th>
+         <th>Email</th>
+         <th>Subject</th>
+         <th>Message</th>
 
 
+     </tr>
+
+     {% for contacts in allcontacts  %}
+         <tr>
+
+         <td>{{ contacts.name }}</td>
+         <td>{{ contacts.email }}</td>
+         <td>{{ contacts.subject }}</td>
+         <td>{{ contacts.message }}</td>
+
+
+
+         </tr>
+
+     {% endfor %}
+
+     </table>
 
 
 {% endblock %}
