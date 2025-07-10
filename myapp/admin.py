@@ -12,6 +12,7 @@ admin.site.register(Appointment)
 
 admin.site.register(Contact)
 
+admin.site.register(Transaction)
 
 
 
